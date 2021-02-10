@@ -1,0 +1,115 @@
+{
+  "menu": {
+    "appetizer": [
+      {
+        "id": "94311",
+        "name": "Edamame",
+        "price": {
+          "currency": "euro",
+          "price": 10,
+          "priceName": "10"
+        },
+        "description": "",
+        "images": [],
+        "qty": 1,
+        "category": 0
+      }
+    ],
+    "sushi": [
+      {
+        "id": "84312",
+        "name": "Ume",
+        "price": {
+          "currency": "euro",
+          "price": 10,
+          "priceName": "10"
+        },
+        "description": "",
+        "images": [],
+        "qty": 1,
+        "category": 1
+      }
+    ],
+    "hot-dishes": [
+      {
+        "id": "74313",
+        "name": "Beef Amiyaki",
+        "price": {
+          "currency": "euro",
+          "price": 10,
+          "priceName": "10"
+        },
+        "description": "",
+        "images": [],
+        "qty": 1,
+        "category": 2
+      }
+    ],
+    "desserts": [
+      {
+        "id": "64314",
+        "name": "Mochi Icecream",
+        "price": {
+          "currency": "euro",
+          "price": 10,
+          "priceName": "10"
+        },
+        "description": "",
+        "images": [],
+        "qty": 1,
+        "category": 3
+      }
+    ],
+    "drinks": [
+      {
+        "id": "54315",
+        "name": "coke",
+        "price": {
+            "currency": "euro",
+            "price": 10,
+            "priceName": "10"
+          },
+        "qty": 1,
+        "category": 0,
+        "sizes": ["small", "large"]
+      },
+      {
+        "id": "54316",
+        "name": "pepsi",
+        "price": {
+            "currency": "euro",
+            "price": 10,
+            "priceName": "10"
+          },
+        "qty": 1,
+        "category": 0,
+        "sizes": ["small", "large"]
+      },
+      {
+        "id": "54317",
+        "name": "water",
+        "price": {
+            "currency": "euro",
+            "price": 10,
+            "priceName": "10"
+          },
+        "qty": 1,
+        "category": 0,
+        "sizes": ["small", "large"]
+      },
+      {
+        "id": "54318",
+        "name": "wine",
+        "price": {
+            "currency": "euro",
+            "price": 10,
+            "priceName": "10"
+          },
+        "qty": 1,
+        "category": 4,
+        "sizes": ["small", "large"]
+      }
+    ],
+    "categories": ["appetizer", "sushi", "hot-dishes", "desserts", "drinks"]
+  }
+}
