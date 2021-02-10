@@ -70,7 +70,7 @@
             "priceName": "10"
           },
         "qty": 1,
-        "category": 0,
+        "category": 4,
         "sizes": ["small", "large"]
       },
       {
@@ -82,7 +82,7 @@
             "priceName": "10"
           },
         "qty": 1,
-        "category": 0,
+        "category": 4,
         "sizes": ["small", "large"]
       },
       {
@@ -94,7 +94,7 @@
             "priceName": "10"
           },
         "qty": 1,
-        "category": 0,
+        "category": 4,
         "sizes": ["small", "large"]
       },
       {
