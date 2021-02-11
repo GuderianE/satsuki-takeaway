@@ -10,6 +10,8 @@ import { SignInForm } from '../components/SignInForm';
 import '../Routes.css';
 
 export const Routes = () => {
+
+    return (
     <Router>
         <Switch>
             <Route path='/' component={Home} />
@@ -21,5 +23,5 @@ export const Routes = () => {
             <Route path='/signup' component={SignUpForm} />
             <Route path='/signin' component={SignInForm} />
         </Switch>
-    </Router>
+    </Router>)
 }

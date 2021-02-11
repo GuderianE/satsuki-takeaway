@@ -4,11 +4,13 @@ import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { Routes } from './routes/Routes';
+import rootReducer from './reducers';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-// const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__);
+const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
-  <Provider >
+  <Provider store={store}>
     <Routes />
   </Provider>,
   document.getElementById('root')
