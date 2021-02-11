@@ -8,20 +8,21 @@ import { Basket } from '../components/Basket';
 import { SignUpForm } from '../components/SignUpForm';
 import { SignInForm } from '../components/SignInForm';
 import '../Routes.css';
+import { Header } from '../components/Header';
 
 export const Routes = () => {
-
     return (
-    <Router>
-        <Switch>
-            <Route path='/' component={Home} />
-            <Route path='/about' component={About} />
-            <Route path='/menu' component={Menu} />
-            <Route path='/contact' component={Contact} />
-            <Route path='/takeawaymenu' component={TakeAwayMenu} />
-            <Route path='/basket' component={Basket} />
-            <Route path='/signup' component={SignUpForm} />
-            <Route path='/signin' component={SignInForm} />
-        </Switch>
-    </Router>)
+        <Router>
+            <Header />
+            <Switch>
+                <Route path='/' component={Home} exact />
+                <Route path='/about' component={About} />
+                <Route path='/menu' component={Menu} />
+                <Route path='/contact' component={Contact} />
+                <Route path='/takeawaymenu' component={TakeAwayMenu} />
+                <Route path='/basket' component={Basket} />
+                <Route path='/signup' component={SignUpForm} />
+                <Route path='/signin' component={SignInForm} />
+            </Switch>
+        </Router>)
 }

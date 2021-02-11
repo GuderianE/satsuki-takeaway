@@ -10,12 +10,16 @@ const initialState = {
 }
 
 export const takeawayReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'ADD_ITEM':
-            console.log("working")
-            return {...state, payload: action.payload}
+            console.log("payload", action.payload)
+            return {
+                ...state,
+                items: [...state.items, action.payload]
+            }
         case 'DELETE_ITEM':
-            return "something else"
+            // const updatedItems = 
+            return "delete stuff"
         case 'BUY_ITEM':
             return "You bought the Item"
         case 'EMTPY_BASKET':

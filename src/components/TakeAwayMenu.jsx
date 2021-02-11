@@ -1,19 +1,14 @@
-import {useDispatch} from 'react-redux';
 import React from 'react';
-import {addItem} from '../actions/basketActions';
-import dummyData from '../dummyData.json';
+import { TakeAwayMenuCard } from '../components/TakeAwayMenuCard';
+import {useSelector} from 'react-redux';
+import { menu } from '../dummyData.json';
 
 export const TakeAwayMenu = () => {
-const dispatch = useDispatch();
+    const state = useSelector(state => state.takeawayReducer.items)
+    console.log(state);
+    const menuItems = Object.values(menu);
+    return menuItems.map((category) =>
+        category.map((item) => <TakeAwayMenuCard key={item.id} item={item} />)
+    );
+};
 
-const {menu} = dummyData;
-
-// const submitHandler = () => {
-//     dispatch(addItem(menu))
-// }
-    return (
-        <div>
-            <button onClick={() => dispatch(addItem(menu))}></button>
-        </div>
-    )
-}
