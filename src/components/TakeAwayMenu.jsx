@@ -1,6 +1,6 @@
 import {useDispatch} from 'react-redux';
 import React from 'react';
-import {addItem} from '../actions/addItem';
+import {addItem} from '../actions/basketActions';
 import dummyData from '../dummyData.json';
 
 export const TakeAwayMenu = () => {
