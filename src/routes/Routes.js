@@ -9,6 +9,7 @@ import { SignUpForm } from '../components/SignUpForm';
 import { SignInForm } from '../components/SignInForm';
 import '../Routes.css';
 import { Header } from '../components/Header';
+import { Checkout } from '../components/Checkout';
 
 export const Routes = () => {
     return (
@@ -23,6 +24,7 @@ export const Routes = () => {
                 <Route path='/basket' component={Basket} />
                 <Route path='/signup' component={SignUpForm} />
                 <Route path='/signin' component={SignInForm} />
+                <Route path='/checkout' component={Checkout} />
             </Switch>
         </Router>)
 }
