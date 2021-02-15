@@ -1,0 +1,18 @@
+.photo-container {
+    @include flexy($wrap: wrap,
+        $just: center);
+    min-height: 100vh;
+
+    .photo {
+        @include flexy($aligni: center, $flex: auto);
+        width: 25rem;
+        a {
+            @include flexy($aligni: center)
+        }
+
+        img {
+            width: 100%;
+            min-height: 20rem;
+        }
+    }
+}

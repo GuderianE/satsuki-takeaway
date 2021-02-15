@@ -1,12 +1,12 @@
-import {ACTION} from '../actions/basketTypes';
+import {ACTION} from '../actions/authenticationTypes';
 
 const initialState = {
     items: []
 }
 
-export const takeawayReducer = (state = initialState, action) => {
+export const authenticationReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ACTION.ADD_ITEM:
+        case ACTION.ADD_USER:
             const exist = state.items.find((item) => item.id === action.payload.id);
             console.log('exist is false', action.payload);
             if (!exist) {
@@ -24,21 +24,16 @@ export const takeawayReducer = (state = initialState, action) => {
                             : { ...item }
                     ),
                 };
-        case ACTION.DECREASE_ITEM:
+        case ACTION.UPDATE_USER:
             return {
                 ...state,
                 items: state.items.map((item) => item.id === action.payload.id ? { ...item, qty: item.qty > 1 ? item.qty - 1 : item.qty = 1 } : { ...item }
                 )
             }
-        case ACTION.DELETE_ITEM:
+        case ACTION.DELETE_USER:
             return {
                 ...state,
                 items: state.items.filter((item) => item.id !== action.payload)
-            }
-        case ACTION.EMPTY_BASKET:
-            return {
-                ...state,
-                items: []
             }
         default:
             return state

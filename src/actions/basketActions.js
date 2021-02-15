@@ -1,15 +1,17 @@
+import {ACTION} from '../actions/basketTypes';
+
 export const addItem = (item) => {
-    return {type: 'ADD_ITEM', payload: item}
+    return {type: ACTION.ADD_ITEM, payload: item}
 }
 
 export const deleteItem = (id) => {
-    return {type: 'DELETE_ITEM', payload: id}
+    return {type: ACTION.DELETE_ITEM, payload: id}
 }
 
 export const emptyBasket = () => {
-    return {type: 'EMPTY_BASKET'}
+    return {type: ACTION.EMTPY_BASKET}
 }
 
 export const decreaseItem = (id) => {
-    return {type: 'DECREASE_ITEM', payload: id}
+    return {type: ACTION.DECREASE_ITEM, payload: id}
 }

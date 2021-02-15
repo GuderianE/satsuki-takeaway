@@ -1,0 +1,12 @@
+.loading-container {
+    @include flexy(
+        $just: center,
+        $aligni: center,
+        $dir: column
+    );
+    min-height: 100vh;
+}
+
+.loading {
+    padding-top: 2rem;
+}
