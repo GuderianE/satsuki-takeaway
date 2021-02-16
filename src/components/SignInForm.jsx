@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import {SignInConfirmation} from './SignInConfirmation';
 
 export const SignInForm = () => {
     const { register, handleSubmit, errors } = useForm();
+    const dispatch = useDispatch();
     const [formSubmitted, setFormSubmitted] = useState(false);
     const allUsersArray = useSelector(state => state.authenticationReducer.users);
 
     const onSubmit = (data) => {
         console.log(data)
         const targetUser = allUsersArray.filter((elem) => elem.email === data.email);
-        console.log(targetUser);
-        // if (targetUserEmail && targetUserPassword) return setFormSubmitted(true)
+        if (data.password === targetUser[0].password && targetUser.length === 1 ) {
+            return setFormSubmitted(true)
+        } 
         alert("wrong password or email")
     }
 

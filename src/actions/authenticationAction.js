@@ -8,6 +8,6 @@ export const deleteUser = (id) => {
     return {type: ACTION.DELETE_USER, payload: id}
 }
 
-export const updateUser = (id) => {
-    return {type: ACTION.UPDATE_USER, payload: id}
+export const updateUser = (user) => {
+    return {type: ACTION.UPDATE_USER, payload: user}
 }

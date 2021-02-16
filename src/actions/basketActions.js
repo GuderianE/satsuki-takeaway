@@ -9,7 +9,7 @@ export const deleteItem = (id) => {
 }
 
 export const emptyBasket = () => {
-    return {type: ACTION.EMTPY_BASKET}
+    return {type: ACTION.EMPTY_BASKET}
 }
 
 export const decreaseItem = (id) => {

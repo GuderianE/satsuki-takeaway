@@ -15,7 +15,6 @@ export const takeawayReducer = (state = initialState, action) => {
                     items: [...state.items, { ...action.payload, qty: 1 }],
                 };
             } else
-            console.log('exist is true', action.payload);
                 return {
                     ...state,
                     items: state.items.map((item) =>
