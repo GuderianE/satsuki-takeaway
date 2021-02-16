@@ -1,28 +1,19 @@
-import {ACTION} from '../actions/authenticationTypes';
+import { ACTION } from '../actions/authenticationTypes';
+import { nanoid } from 'nanoid';
+
+const id = nanoid();
 
 const initialState = {
-    items: []
+    users: [ {name: 'Elias', email: 'theguderian@gmail.com', password: '12345678'}, {name: 'Amit', email: 'amit@gmail.com', password: '11111111'}]
 }
 
 export const authenticationReducer = (state = initialState, action) => {
     switch (action.type) {
         case ACTION.ADD_USER:
-            const exist = state.items.find((item) => item.id === action.payload.id);
-            console.log('exist is false', action.payload);
-            if (!exist) {
+            console.log('paylaod', action.payload)
                 return {
                     ...state,
-                    items: [...state.items, { ...action.payload, qty: 1 }],
-                };
-            } else
-            console.log('exist is true', action.payload);
-                return {
-                    ...state,
-                    items: state.items.map((item) =>
-                        item.id === action.payload.id
-                            ? { ...item, qty: item.qty + 1 }
-                            : { ...item }
-                    ),
+                    users: [...state.users, { ...action.payload.data, id: id }],
                 };
         case ACTION.UPDATE_USER:
             return {
