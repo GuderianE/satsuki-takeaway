@@ -6,24 +6,28 @@ import { SearchBar } from './SearchBar';
 
 export const TakeAwayMenu = () => {
     const state = useSelector(state => state.searchReducer);
-    console.log('state',state);
+    console.log('state', state);
     const menuItems = Object.values(menu);
+    const searchstate = state.toLowerCase().trim();
+    const tragetCategory = menuItems.map((category) => {
+        /* checks if input has string if true searches for match and returns match only */ 
+        if (state !== '') {
+            return (
+                category
+                .filter((item) => !item.category.search(searchstate) 
+                || !item.name.toLowerCase().search(searchstate))
+                .map((item) => <TakeAwayMenuCard key={item.id} item={item} />)
+                )
+        } else {
+            return category.map((item) => (<TakeAwayMenuCard key={item.id} item={item} />))
+        }
+    })
+
     return (
         <>
             <SearchBar />
-            {menuItems.map((category) => {
-                if (state !== '') {
-                    return category
-                        .filter((item) => !item.category.search(state.toLowerCase().trim()) || !item.name.toLowerCase().search(state.toLowerCase().trim()))
-                        .map((item) => <TakeAwayMenuCard key={item.id} item={item} />)
-                } else {
-                    return category.map((item) => (<TakeAwayMenuCard key={item.id} item={item} />)
-                    )
-                }
-            }
-            )}
+            {tragetCategory}
 
         </>
     )
 };
-

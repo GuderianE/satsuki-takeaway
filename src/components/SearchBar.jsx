@@ -14,6 +14,7 @@ export const SearchBar = () => {
             <button onClick={() => dispatch(search("hot-dishes"))}>Hot-Dishes</button>
             <button onClick={() => dispatch(search("desserts"))}>Desserts</button>
             <button onClick={() => dispatch(search("drinks"))}>Drinks</button>
+            <button onClick={() => dispatch(search(""))}>Menu</button>
         </div>
     )
 }

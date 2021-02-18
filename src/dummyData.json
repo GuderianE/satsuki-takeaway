@@ -1,4 +1,4 @@
- {
+{
   "menu": {
     "appetizer": [
       {
@@ -10,7 +10,7 @@
           "priceName": "10"
         },
         "description": "",
-        "images": [],
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "appetizer"
       },
@@ -23,7 +23,7 @@
           "priceName": "10"
         },
         "description": "",
-        "images": [],
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "appetizer"
       }
@@ -38,7 +38,7 @@
           "priceName": "10"
         },
         "description": "",
-        "images": [],
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "sushi"
       },
@@ -51,7 +51,7 @@
           "priceName": "10"
         },
         "description": "",
-        "images": [],
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "sushi"
       }
@@ -66,7 +66,7 @@
           "priceName": "10"
         },
         "description": "",
-        "images": [],
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "hot-dishes"
       },
@@ -79,7 +79,7 @@
           "priceName": "10"
         },
         "description": "",
-        "images": [],
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "hot-dishes"
       }
@@ -94,7 +94,7 @@
           "priceName": "10"
         },
         "description": "",
-        "images": [],
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "desserts"
       },
@@ -107,7 +107,7 @@
           "priceName": "10"
         },
         "description": "",
-        "images": [],
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "desserts"
       }
@@ -117,10 +117,11 @@
         "id": "54315",
         "name": "coke",
         "price": {
-            "currency": "euro",
-            "price": 10,
-            "priceName": "10"
-          },
+          "currency": "euro",
+          "price": 10,
+          "priceName": "10"
+        },
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "drinks",
         "sizes": ["small", "large"]
@@ -129,10 +130,11 @@
         "id": "54316",
         "name": "pepsi",
         "price": {
-            "currency": "euro",
-            "price": 10,
-            "priceName": "10"
-          },
+          "currency": "euro",
+          "price": 10,
+          "priceName": "10"
+        },
+        "images": "https://picsum.photos/200/300",
         "qty": 1,
         "category": "drinks",
         "sizes": ["small", "large"]
@@ -141,11 +143,12 @@
         "id": "54317",
         "name": "water",
         "price": {
-            "currency": "euro",
-            "price": 10,
-            "priceName": "10"
-          },
+          "currency": "euro",
+          "price": 10,
+          "priceName": "10"
+        },
         "qty": 1,
+        "images": "https://picsum.photos/200/300",
         "category": "drinks",
         "sizes": ["small", "large"]
       },
@@ -153,11 +156,12 @@
         "id": "54318",
         "name": "wine",
         "price": {
-            "currency": "euro",
-            "price": 10,
-            "priceName": "10"
-          },
+          "currency": "euro",
+          "price": 10,
+          "priceName": "10"
+        },
         "qty": 1,
+        "images": "https://picsum.photos/200/300",
         "category": "drinks",
         "sizes": ["small", "large"]
       }
