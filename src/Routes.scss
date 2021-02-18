@@ -1,11 +1,3 @@
-@import 
-'./sass/globals',
-'./sass/mixins',
-'./sass/functions';
-@import
-'./sass/takeawaymenu',
-'./sass/footer',
-'./sass/header',
-'./sass/nav',
-'./sass/takeawaymenucard',
-'./sass/custom';
+@import "./sass/globals", "./sass/mixins", "./sass/functions";
+@import "./sass/takeawaymenu", "./sass/footer", "./sass/header", "./sass/nav",
+  "./sass/takeawaymenucard", "./sass/form";

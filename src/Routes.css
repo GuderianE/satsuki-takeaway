@@ -1,1 +1,62 @@
-/* No CSS *//*# sourceMappingURL=Routes.css.map */
+@media (min-width: 768px) {
+  .myForm {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.myForm div {
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.myForm input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.myForm .userAgreement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.myForm .userAgreement label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.myForm .userAgreement input {
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.myForm button {
+  width: 100%;
+  background-color: #cd3e36;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Routes.css.map */
