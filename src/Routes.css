@@ -28,7 +28,7 @@
 }
 
 .nav .nav-links {
-  left: 30px;
+  left: -16px;
   top: 0;
   height: 100vh;
   width: 30vw;
@@ -72,5 +72,84 @@
 .nav a {
   color: #fff;
   text-decoration: none;
+}
+
+.initialClose {
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+}
+
+.close {
+  -webkit-animation: slideOut 400ms ease forwards;
+          animation: slideOut 400ms ease forwards;
+}
+
+.open {
+  -webkit-animation: slideIn 400ms ease forwards;
+          animation: slideIn 400ms ease forwards;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideOut {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=Routes.css.map */
