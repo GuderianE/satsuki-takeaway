@@ -3,11 +3,18 @@
     position: relative;
     padding: $global-padding;
 
+    @include breakpoint(medium) {
+        @include flexy($aligni: center);
+        height: 4vh;
+    }
+
     .hamburgerToggle {
+        width: 1.2rem;
+        padding: .3rem;
         z-index: 20;
-        left: 1rem;
+        left: .6rem;
         right: 0;
-        top: 1rem;
+        top: .6rem;
         position: absolute;
         @include flexy($dir: column);
         cursor: pointer;
@@ -33,13 +40,25 @@
         padding: $global-padding;
         z-index: 1;
 
+        @include breakpoint(medium) {
+            position: static;
+            flex-direction: row;
+            height: 100%;
+            width: 90%;
+        }
+
         .nav-link {
-            width: 7rem;
+            width: 25vw;
             background-color: $accent;
             margin: $global-margin;
             padding: $global-padding;
             border-radius: $global-border-radius;
             text-align: center;
+
+            @include breakpoint(medium) {
+                height: 2vh;
+                width: 10vw;
+            }
         }
     }
 
@@ -70,22 +89,27 @@
         transform: translateX(-500px);
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
+
 @keyframes slideOut {
     0% {
         transform: translateX(0px);
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         transform: translateX(-500px);
         opacity: 0;
