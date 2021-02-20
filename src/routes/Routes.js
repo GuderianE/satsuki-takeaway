@@ -9,6 +9,7 @@ import { SignUpForm } from '../components/SignUpForm';
 import { SignInForm } from '../components/SignInForm';
 import '../Routes.css';
 import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 import { Checkout } from '../components/Checkout';
 
 export const Routes = () => {
@@ -26,5 +27,6 @@ export const Routes = () => {
                 <Route path='/signin' component={SignInForm} />
                 <Route path='/checkout' component={Checkout} />
             </Switch>
+            <Footer />
         </Router>)
 }

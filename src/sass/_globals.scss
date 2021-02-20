@@ -39,3 +39,8 @@ $color-base--light: lighten($color--base, 25%);
 
 $complement: complement($color--base);
 $complement-light: lighten($complement, 30%);
+
+// Buttons
+$global-padding: 1rem;
+$global-margin: .4rem;
+$global-border-radius: .4rem;
