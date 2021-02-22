@@ -1,3 +1,28 @@
+.takeawaymenu_container {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 75px;
+  line-height: 75px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 3rem;
+}
+
+.takeawaymenu_container img {
+  height: 200px;
+  width: 250px;
+}
+
 .nav {
   background-color: #000;
   position: relative;
@@ -249,6 +274,54 @@
             transform: translateX(-500px);
     opacity: 0;
   }
+}
+
+.menu_card {
+  border: 1px solid #f5ebeb;
+  padding: 2rem;
+  margin: 1rem;
+  -webkit-box-shadow: 1px 0px 2px 1px #f5ebeb inset;
+          box-shadow: 1px 0px 2px 1px #f5ebeb inset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_card button {
+  background-color: #cd3e36;
+  color: #fff;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 300px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  border: 4px solid #fff;
+  -webkit-box-shadow: 0px 0px 0px 1px #ef9191 inset;
+          box-shadow: 0px 0px 0px 1px #ef9191 inset;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu_card button:hover {
+  text-decoration: none;
+  border: 4px solid #ef9191;
+  -webkit-box-shadow: 0px 0px 0px 4px #eee inset;
+          box-shadow: 0px 0px 0px 4px #eee inset;
+  background-color: #cd3e36;
 }
 
 @media (min-width: 768px) {
@@ -560,10 +633,9 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem;
-  padding: 1rem;
   width: 100%;
   height: 400px;
+  background-size: cover;
 }
 
 .take_away h1 {
@@ -580,7 +652,7 @@ h3 {
   border-color: #fff;
   background: transparent;
   padding: 1rem;
-  margin: 1rem;
+  margin-bottom: 2rem;
   border-radius: 3rem;
 }
 
@@ -606,13 +678,12 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: (minmax(280px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  margin: 3rem;
 }
 
 .menu .menu_card_container .menu_card {
@@ -633,6 +704,8 @@ h3 {
 
 .menu .menu_card_container .menu_card .image_wrap img {
   width: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -682,6 +755,30 @@ h3 {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+}
+
+.takeawaymenu_container {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  height: 75px;
+  line-height: 75px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   margin: 3rem;
+}
+
+.takeawaymenu_container img {
+  height: 200px;
+  width: 250px;
 }
 /*# sourceMappingURL=Routes.css.map */

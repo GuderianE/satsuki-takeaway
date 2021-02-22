@@ -33,7 +33,7 @@ export const Home = () => {
         <div className='menu_card_container'>
           <div className='menu_card'>
             <div className='image_wrap'>
-              <img src={sushi} alt='' />
+              <img src={sushi} alt='sushi' />
             </div>
             <div className='text_container'>
               <p>
@@ -51,7 +51,7 @@ export const Home = () => {
           </div>
           <div className='menu_card'>
             <div className='image_wrap'>
-              <img src={sukiyaki} alt='' />
+              <img src={sukiyaki} alt='sukiyaki' />
             </div>
             <div className='text_container'>
               <p>
@@ -69,7 +69,7 @@ export const Home = () => {
           </div>
           <div className='menu_card'>
             <div className='image_wrap'>
-              <img src={tempura} alt='' />
+              <img src={tempura} alt='tempura' />
             </div>
             <div className='text_container'>
               <p>
