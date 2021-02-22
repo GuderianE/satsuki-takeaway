@@ -6,7 +6,7 @@
         "name": "Bratwurst",
         "price": {
           "currency": "euro",
-          "price": 10,
+          "price": 10.0,
           "priceName": "10"
         },
         "description": "",

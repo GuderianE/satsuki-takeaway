@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { useForm } from "react-hook-form";
-import { SignInConfirmation } from "./SignInConfirmation";
+
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { useForm } from 'react-hook-form';
+import { SignInConfirmation } from './SignInConfirmation';
 
 export const SignInForm = () => {
   const { register, handleSubmit, errors } = useForm();
-  const dispatch = useDispatch();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const allUsersArray = useSelector(
     (state) => state.authenticationReducer.users
@@ -37,10 +37,12 @@ export const SignInForm = () => {
         <input
           type="password"
           name="password"
+
           ref={register({ required: true })}
         />
         {errors.password && <small>Please provide your password!</small>}
       </div>
+
       <button type="submit">Log In</button>
     </form>
   );
