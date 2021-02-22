@@ -1,8 +1,7 @@
-
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { useForm } from 'react-hook-form';
-import { SignInConfirmation } from './SignInConfirmation';
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { useForm } from "react-hook-form";
+import { SignInConfirmation } from "./SignInConfirmation";
 
 export const SignInForm = () => {
   const { register, handleSubmit, errors } = useForm();
@@ -37,13 +36,13 @@ export const SignInForm = () => {
         <input
           type="password"
           name="password"
-
           ref={register({ required: true })}
         />
         {errors.password && <small>Please provide your password!</small>}
       </div>
-
-      <button type="submit">Log In</button>
+      <div className="buttonContainer">
+        <button type="submit">Log In</button>
+      </div>
     </form>
   );
 };
