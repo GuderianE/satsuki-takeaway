@@ -99,24 +99,20 @@ export const Home = () => {
         </div>
         <div className='location_card_container'>
           <div className='loaction_card'>
+            <h3>CHAMONIX</h3>
             <div>
-              <h3>CHAMONIX</h3>
-              <div>
-                <p>Heures d'ouverture : 12:00-14:30 / 18:30-22:00</p>
-                <p>Téléphone : +33 (0)4 50 53 21 99 </p>
-                <p>Adresse : 288 RUE JOSEPH VALLOT, CHAMONIX</p>
-              </div>
+              <p>Heures d'ouverture : 12:00-14:30 / 18:30-22:00</p>
+              <p>Téléphone : +33 (0)4 50 53 21 99 </p>
+              <p>Adresse : 288 RUE JOSEPH VALLOT, CHAMONIX</p>
             </div>
           </div>
 
           <div className='loaction_card'>
+            <h3>MEGEVE</h3>
             <div>
-              <h3>MEGEVE</h3>
-              <div>
-                <p>Heures d'ouverture : 12:00-14:30 / 17:30-21:30</p>
-                <p>Téléphone : +33 (0)4 50 90 50 19</p>
-                <p>Addresse : ROND POINT DE LA POSTE, 74120 MEGEVE </p>
-              </div>
+              <p>Heures d'ouverture : 12:00-14:30 / 17:30-21:30</p>
+              <p>Téléphone : +33 (0)4 50 90 50 19</p>
+              <p>Addresse : ROND POINT DE LA POSTE, 74120 MEGEVE </p>
             </div>
           </div>
         </div>

@@ -9,8 +9,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: (minmax(280px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 20px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
@@ -151,7 +154,7 @@
           align-items: center;
   position: absolute;
   top: .1rem;
-  right: 50%;
+  left: 44%;
   margin: 0;
   width: 3rem;
 }
@@ -637,6 +640,7 @@ h3 {
   width: 100%;
   height: 400px;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .take_away h1 {
@@ -679,8 +683,8 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 20px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
@@ -737,6 +741,8 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .location_img h1 {
@@ -750,12 +756,31 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-grid-columns: (minmax(280px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 20px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+}
+
+.location_card_container .loaction_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #000;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .contactForm {
@@ -882,5 +907,50 @@ h3 {
     width: 50%;
     margin: 0 auto;
   }
+}
+
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search-container .searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.search-container .searchbar input {
+  padding: .4rem;
+}
+
+.search-container .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.search-container .button-container button {
+  background-color: #cd3e36;
+  padding: .5rem;
+  margin: .1rem;
+  border: transparent;
+  color: #fff;
+  cursor: pointer;
 }
 /*# sourceMappingURL=Routes.css.map */
