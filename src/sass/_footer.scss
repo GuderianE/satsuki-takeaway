@@ -1,0 +1,36 @@
+footer {
+  background-color: black;
+  color: white;
+  height: 40vh;
+
+  .locations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      text-align: center;
+    }
+    a {
+      color: white;
+    }
+  }
+
+  .icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .icon {
+      padding: 5px;
+    }
+  }
+
+  .reserved {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: auto;
+  }
+}
