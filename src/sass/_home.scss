@@ -12,10 +12,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
-  padding: 1rem;
   width: 100%;
   height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
   h1 {
     color: $primary;
     font-size: 4rem;
@@ -28,7 +28,7 @@
     border-color: $primary;
     background: transparent;
     padding: 1rem;
-    margin: 1rem;
+    margin-bottom: 2rem;
     border-radius: 3rem;
   }
 }
@@ -40,10 +40,9 @@
   .menu_card_container {
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 20px;
     align-items: stretch;
-    margin: 3rem;
     .menu_card {
       display: flex;
       flex-direction: column;
@@ -52,7 +51,8 @@
       .image_wrap {
         img {
           width: 300px;
-
+          background-repeat: no-repeat;
+          background-size: cover;
           overflow: hidden;
         }
       }
@@ -79,6 +79,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   h1 {
     color: $primary;
     font-size: 4rem;
@@ -88,8 +90,16 @@
 .location_card_container {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 20px;
   align-items: stretch;
-  margin: 3rem;
+  .loaction_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $secondary;
+    padding: 1rem;
+    margin: 1rem;
+  }
 }

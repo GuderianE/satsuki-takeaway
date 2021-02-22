@@ -22,7 +22,7 @@ export const Nav = () => {
         window.addEventListener('resize', () => {
             return setWindowWidth(window.innerWidth);
         });
-    }, [setAnimateToggle,setWindowWidth]);
+    });
 
     const menuSlideIn = () => {
         const slideInAnimation = animateToggle !== 'open' ? 'open' : 'close';
@@ -56,7 +56,7 @@ export const Nav = () => {
 
     return (
         <div className='nav'>
-            {windowWidth > breakpointM ? (
+            {windowWidth >= breakpointM ? (
                 <div className='nav-links'>
                     <div className='nav-link'>
                         <NavLink to='/'>Home</NavLink>
@@ -85,7 +85,7 @@ export const Nav = () => {
                     </div>
                 )}
                 <div className='logo'>
-                    {windowWidth > breakpointM ? <img src={LogoBig} alt=""/> : <img src={Logo} alt=""/>}
+                    {windowWidth >= breakpointM ? <img src={LogoBig} alt=""/> : <img src={Logo} alt=""/>}
                 </div>
             <div className='basket-icon'>
                 <div className='nav-link'>

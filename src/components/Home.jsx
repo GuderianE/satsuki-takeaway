@@ -21,7 +21,7 @@ export const Home = () => {
       </section>
       <section
         className='take_away'
-        style={{ backgroundImage: `url(${sushi2})` }}
+        style={{ backgroundImage: `url(${sushi2})`}}
       >
         <h1>TAKE AWAY</h1>
         <p>You can order food here and pick up at Restaurant</p>
@@ -33,7 +33,7 @@ export const Home = () => {
         <div className='menu_card_container'>
           <div className='menu_card'>
             <div className='image_wrap'>
-              <img src={sushi} alt='' />
+              <img src={sushi} alt='sushi' />
             </div>
             <div className='text_container'>
               <p>
@@ -51,7 +51,7 @@ export const Home = () => {
           </div>
           <div className='menu_card'>
             <div className='image_wrap'>
-              <img src={sukiyaki} alt='' />
+              <img src={sukiyaki} alt='sukiyaki' />
             </div>
             <div className='text_container'>
               <p>
@@ -69,7 +69,7 @@ export const Home = () => {
           </div>
           <div className='menu_card'>
             <div className='image_wrap'>
-              <img src={tempura} alt='' />
+              <img src={tempura} alt='tempura' />
             </div>
             <div className='text_container'>
               <p>
@@ -99,24 +99,20 @@ export const Home = () => {
         </div>
         <div className='location_card_container'>
           <div className='loaction_card'>
+            <h3>CHAMONIX</h3>
             <div>
-              <h3>CHAMONIX</h3>
-              <div>
-                <p>Heures d'ouverture : 12:00-14:30 / 18:30-22:00</p>
-                <p>Téléphone : +33 (0)4 50 53 21 99 </p>
-                <p>Adresse : 288 RUE JOSEPH VALLOT, CHAMONIX</p>
-              </div>
+              <p>Heures d'ouverture : 12:00-14:30 / 18:30-22:00</p>
+              <p>Téléphone : +33 (0)4 50 53 21 99 </p>
+              <p>Adresse : 288 RUE JOSEPH VALLOT, CHAMONIX</p>
             </div>
           </div>
 
           <div className='loaction_card'>
+            <h3>MEGEVE</h3>
             <div>
-              <h3>MEGEVE</h3>
-              <div>
-                <p>Heures d'ouverture : 12:00-14:30 / 17:30-21:30</p>
-                <p>Téléphone : +33 (0)4 50 90 50 19</p>
-                <p>Addresse : ROND POINT DE LA POSTE, 74120 MEGEVE </p>
-              </div>
+              <p>Heures d'ouverture : 12:00-14:30 / 17:30-21:30</p>
+              <p>Téléphone : +33 (0)4 50 90 50 19</p>
+              <p>Addresse : ROND POINT DE LA POSTE, 74120 MEGEVE </p>
             </div>
           </div>
         </div>
