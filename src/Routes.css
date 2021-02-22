@@ -758,27 +758,6 @@ h3 {
           align-items: stretch;
 }
 
-.takeawaymenu_container {
-  max-width: 1500px;
-  margin: 0 auto;
-  margin-top: 50px;
-  height: 75px;
-  line-height: 75px;
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-grid-columns: (minmax(280px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-gap: 20px;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  margin: 3rem;
-}
-
-<<<<<<< HEAD
 .contactForm {
   min-height: 100vh;
   display: -webkit-box;
@@ -903,10 +882,5 @@ h3 {
     width: 50%;
     margin: 0 auto;
   }
-=======
-.takeawaymenu_container img {
-  height: 200px;
-  width: 250px;
->>>>>>> 92683d276f549e7b136f48a929e0ffd94bd73d8a
 }
 /*# sourceMappingURL=Routes.css.map */

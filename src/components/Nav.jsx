@@ -11,18 +11,18 @@ export const Nav = () => {
 
     let menuRef = useRef();
 
-    useEffect(() => {
-        if (windowWidth < breakpointM) {
-            document.addEventListener('mousedown', (e) => {
-                if (!menuRef.current.contains(e.target)) {
-                    setAnimateToggle('close');
-                }
-            });
-        }
-        window.addEventListener('resize', () => {
-            return setWindowWidth(window.innerWidth);
+    if (windowWidth < breakpointM) {
+        document.addEventListener('mousedown', (e) => {
+            if (!menuRef.current.contains(e.target)) {
+                setAnimateToggle('close');
+            }
         });
+    }
+    window.addEventListener('resize', () => {
+        return setWindowWidth(window.innerWidth);
     });
+    // useEffect(() => {
+    // });
 
     const menuSlideIn = () => {
         const slideInAnimation = animateToggle !== 'open' ? 'open' : 'close';
