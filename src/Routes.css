@@ -72,6 +72,10 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 0;
     height: 100%;
     width: 90%;
   }
@@ -88,8 +92,54 @@
 
 @media (min-width: 768px) {
   .nav .nav-links .nav-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #000;
+    margin: 0;
     height: 2vh;
-    width: 10vw;
+    width: 4.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav .nav-links .nav-link {
+    width: 5rem;
+  }
+}
+
+.nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: .1rem;
+  right: 50%;
+  margin: 0;
+  width: 3rem;
+}
+
+.nav .logo img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .nav .logo {
+    left: 2rem;
+    z-index: 2;
+    width: 6rem;
   }
 }
 
@@ -100,6 +150,21 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .nav .basket-icon .nav-link {
+    text-align: center;
+    width: 6rem;
+  }
+}
+
+.nav .basket-icon .nav-link a {
+  width: 4rem;
+  padding: 1rem;
 }
 
 .nav a {
