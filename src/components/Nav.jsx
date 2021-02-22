@@ -16,14 +16,15 @@ let menuRef = useRef();
                 }
             })
         }
+        window.addEventListener('resize', () => {
+            return setWindowWidth(window.innerWidth)
+        })
     })
-
 
     const menuSlideIn = () => {
         const slideInAnimation = animateToggle !== 'open' ? 'open' : 'close';
         setAnimateToggle(slideInAnimation);
     }
-
 
     const hamburgerLogic = () => {
         return (
@@ -42,11 +43,6 @@ let menuRef = useRef();
             </div>
         )
     }
-
-
-    window.addEventListener('resize', () => {
-        return setWindowWidth(window.innerWidth)
-    })
 
     return (
         <div className='nav'>
