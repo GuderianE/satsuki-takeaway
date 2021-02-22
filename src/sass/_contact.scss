@@ -1,22 +1,21 @@
-.signIn {
+.contactForm {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  div {
-    border-radius: 5px;
-    background-color: $primary;
-    padding: 10px;
-    width: 100%;
-  }
-
   h3 {
     border-bottom: 2px solid black;
   }
 
   label {
     text-transform: capitalize;
+  }
+  div {
+    border-radius: 5px;
+    background-color: $primary;
+    padding: 10px;
+    width: 100%;
   }
 
   input {
@@ -27,6 +26,10 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+  }
+
+  input.text-area {
+    height: 100px;
   }
 
   button {

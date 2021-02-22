@@ -26,6 +26,7 @@ export const SignInForm = () => {
     <SignInConfirmation state={setFormSubmitted} />
   ) : (
     <form onSubmit={handleSubmit(onSubmit)} className="signIn">
+      <h3>Sign In</h3>
       <div>
         <label htmlFor="email">Email</label>
         <input type="email" name="email" ref={register({ required: true })} />
