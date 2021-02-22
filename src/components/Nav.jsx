@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 export const Nav = () => {
   return (
-    <nav>
+    <div>
       <NavLink to='/basket'>basket</NavLink>
       <NavLink to='/takeawaymenu'>Take Away</NavLink>
       <NavLink to='/signup'>Sign Up</NavLink>
       <NavLink to='/signin'>Sign In</NavLink>
-    </nav>
+    </div>
   );
 };
