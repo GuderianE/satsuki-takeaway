@@ -1,0 +1,95 @@
+.restaurant_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.take_away {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 400px;
+  h1 {
+    color: $primary;
+    font-size: 4rem;
+  }
+  p {
+    color: $primary;
+  }
+  button {
+    color: $primary;
+    border-color: $primary;
+    background: transparent;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 3rem;
+  }
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .menu_card_container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    margin: 3rem;
+    .menu_card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .image_wrap {
+        img {
+          width: 300px;
+
+          overflow: hidden;
+        }
+      }
+      .text_container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  }
+  button {
+    text-align: center;
+    color: $secondary;
+    border-color: $secondary;
+    background: transparent;
+    padding: 1rem;
+    border-radius: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.location_img {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: $primary;
+    font-size: 4rem;
+  }
+}
+
+.location_card_container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  margin: 3rem;
+}
