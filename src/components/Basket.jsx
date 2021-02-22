@@ -5,12 +5,14 @@ import { emptyBasket } from '../actions/basketActions';
 import { BasketItem } from './BasketItem';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 import empty from '../assets/empty.jpg';
+
 export const Basket = () => {
   const state = useSelector((state) => state.takeawayReducer.items);
   const dispatch = useDispatch();
   const subTotal = state
     .reduce((acc, item) => acc + item.price.price * item.qty, 0)
     .toFixed(2);
+
   const basketItem = state.map((item) => (
     <BasketItem key={item.id} item={item} />
   ));
