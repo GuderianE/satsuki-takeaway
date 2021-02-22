@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
@@ -18,28 +19,31 @@ export const SignInForm = () => {
     if (data.password === targetUser[0].password && targetUser.length === 1) {
       return setFormSubmitted(true);
     }
-    alert('wrong password or email');
+    alert("wrong password or email");
   };
 
   return formSubmitted ? (
     <SignInConfirmation state={setFormSubmitted} />
   ) : (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className="signIn">
+      <h3>Sign In</h3>
       <div>
-        <label htmlFor='email'>Email</label>
-        <input type='email' name='email' ref={register({ required: true })} />
+        <label htmlFor="email">Email</label>
+        <input type="email" name="email" ref={register({ required: true })} />
         {errors.email && <small>Please provide your email!</small>}
       </div>
       <div>
-        <label htmlFor='password'>Password</label>
+        <label htmlFor="password">Password</label>
         <input
-          type='password'
-          name='password'
+          type="password"
+          name="password"
+
           ref={register({ required: true })}
         />
         {errors.password && <small>Please provide your password!</small>}
       </div>
-      <button type='submit'>Log In</button>
+
+      <button type="submit">Log In</button>
     </form>
   );
 };
