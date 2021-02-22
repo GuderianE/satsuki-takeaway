@@ -21,7 +21,7 @@ export const Home = () => {
       </section>
       <section
         className='take_away'
-        style={{ backgroundImage: `url(${sushi2})` }}
+        style={{ backgroundImage: `url(${sushi2})`}}
       >
         <h1>TAKE AWAY</h1>
         <p>You can order food here and pick up at Restaurant</p>

@@ -22,7 +22,7 @@ export const Nav = () => {
         window.addEventListener('resize', () => {
             return setWindowWidth(window.innerWidth);
         });
-    }, [setAnimateToggle,setWindowWidth]);
+    });
 
     const menuSlideIn = () => {
         const slideInAnimation = animateToggle !== 'open' ? 'open' : 'close';

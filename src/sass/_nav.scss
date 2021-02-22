@@ -80,6 +80,7 @@
             width: 100%;
         }
         @include breakpoint(medium) {
+            top: .2rem;
             left: 2rem;
             z-index: 2;
             width: 6rem;
