@@ -1,4 +1,12 @@
 .menu_card {
+  border: 1px solid #f5ebeb;
+  padding: 2rem;
+  margin: 1rem;
+  box-shadow: 1px 0px 2px 1px #f5ebeb inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   button {
     background-color: $accent;
     color: $primary;

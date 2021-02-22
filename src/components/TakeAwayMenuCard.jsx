@@ -6,7 +6,9 @@ export const TakeAwayMenuCard = ({ item }) => {
   const dispatch = useDispatch();
   return (
     <div className='menu_card'>
-      <img src={item.images} alt='Lorem Picsum' />
+      <div>
+        <img src={item.images} alt='Lorem Picsum' />
+      </div>
       <div>
         <strong>{item.name}</strong>
       </div>
