@@ -1,37 +1,92 @@
+a {
+  color: inherit;
+}
+
+.heroImage {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .heroContents {
+    padding-top: 25px;
+    text-align: center;
+    color: white;
+    h1 {
+      font-size: 3.5rem;
+    }
+    p {
+      font-size: 2rem;
+      padding: 3rem;
+    }
+  }
+}
+////////////////////////////////////////////////
+
 .restaurant_info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
-  padding: 1rem;
+  padding-top: 6.6vmax;
+  padding-bottom: 6.6vmax;
+  .restaurant_info_text {
+    width: 50%;
+    h2 {
+      margin: 2rem 0;
+      text-align: center;
+      font-size: 2.8rem;
+    }
+    p {
+      margin-top: 1rem;
+    }
+  }
 }
+////////////////////////////////////////////////
 
 .take_away {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   width: 100%;
-  height: 400px;
+  height: 700px;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  h1 {
-    color: $primary;
-    font-size: 4rem;
-  }
-  p {
-    color: $primary;
-  }
-  button {
-    color: $primary;
-    border-color: $primary;
-    background: transparent;
+  .content_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
-    margin-bottom: 2rem;
-    border-radius: 3rem;
+    h1 {
+      color: $primary;
+      font-size: 3.5rem;
+    }
+    p {
+      color: $primary;
+      font-size: 2rem;
+    }
+    button {
+      color: $primary;
+      border-color: $primary;
+      background: transparent;
+      padding: 1rem;
+      margin: 4rem;
+      border-radius: 3rem;
+    }
   }
 }
+////////////////////////////////////////////////
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -48,17 +103,20 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      .image_wrap {
-        img {
-          width: 300px;
-          background-repeat: no-repeat;
-          background-size: cover;
-          overflow: hidden;
+      .content_wrap {
+        .image_wrap {
+          img {
+            width: 300px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+          }
         }
-      }
-      .text_container {
-        margin: 1rem;
-        padding: 1rem;
+        .text_container {
+          margin: 1rem;
+          padding: 1rem;
+        }
       }
     }
   }
@@ -73,24 +131,30 @@
   }
 }
 
+////////////////////////////////////////////////
+
 .location_img {
   width: 100%;
-  height: 400px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  h1 {
-    color: $primary;
-    font-size: 4rem;
+  .content_wrap {
+    padding: 1rem;
+    h1 {
+      color: $primary;
+      font-size: 3.4rem;
+    }
   }
 }
 
 .location_card_container {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 20px;
   align-items: stretch;
   .loaction_card {
@@ -101,5 +165,8 @@
     border: 1px solid $secondary;
     padding: 1rem;
     margin: 1rem;
+    .content_wrap {
+      padding: 1rem;
+    }
   }
 }
