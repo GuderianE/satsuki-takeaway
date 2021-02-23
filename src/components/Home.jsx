@@ -139,6 +139,16 @@ export const Home = () => {
               </div>
             </div>
           </div>
+          <div className='loaction_card'>
+            <div className='content_wrap'>
+              <h3>MEGEVE</h3>
+              <div>
+                <p>Heures d'ouverture : 12:00-14:30 / 17:30-21:30</p>
+                <p>Téléphone : +33 (0)4 50 90 50 19</p>
+                <p>Addresse : ROND POINT DE LA POSTE, 74120 MEGEVE </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section className='image_gallery'>
