@@ -22,6 +22,7 @@ export const SignUpForm = () => {
     <SignUpConfirmation state={setFormSubmitted} />
   ) : (
     <form className="myForm" onSubmit={handleSubmit(onSubmit)}>
+      <h3>Sign Up</h3>
       <div>
         <label htmlFor="firstName">First Name</label>
         <input

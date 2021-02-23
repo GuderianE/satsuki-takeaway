@@ -25,7 +25,9 @@ export const Contact = () => {
           />
         </div>
 
-        <button>submit</button>
+        <div className="buttonContainer">
+          <button>submit</button>
+        </div>
       </form>
     </>
   );
