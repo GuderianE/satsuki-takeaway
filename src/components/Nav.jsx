@@ -16,7 +16,7 @@ export const Nav = () => {
         console.log(windowWidth);
         return setWindowWidth(window.innerWidth);
     });
-    useEffect(() => {
+    // useEffect(() => {
         if (windowWidth < breakpointM) {
             console.log(animateToggle)
             document.addEventListener('mousedown', (e) => {
@@ -25,7 +25,7 @@ export const Nav = () => {
                 }
             });
         }
-    });
+    // });
 
     const menuSlideIn = () => {
         const slideInAnimation = animateToggle !== 'open' ? 'open' : 'close';
