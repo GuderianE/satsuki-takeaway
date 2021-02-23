@@ -43,6 +43,8 @@
         @include breakpoint(medium) {
             position: static;
             flex-direction: row;
+            justify-content: flex-end;
+            padding-right: 0;
             height: 100%;
             width: 90%;
         }
@@ -56,14 +58,46 @@
             text-align: center;
 
             @include breakpoint(medium) {
+                @include flexy($aligni: center, $just: center);
+                background-color: $secondary;
+                margin: 0;
                 height: 2vh;
-                width: 10vw;
+                width: 4.5rem;
+            }
+            @include breakpoint(large) {
+                width: 5rem;
             }
         }
     }
-
+    .logo {
+        @include flexy($just: center, $aligni: center);
+        position: absolute;
+        top: .1rem;
+        right: 50%;
+        margin: 0;
+        width: 3rem;
+        img {
+            width: 100%;
+        }
+        @include breakpoint(medium) {
+            top: .2rem;
+            left: 2rem;
+            z-index: 2;
+            width: 6rem;
+        }
+    }
     .basket-icon {
-        @include flexy($just: flex-end)
+        @include flexy($just: flex-end, $aligni: center);
+        .nav-link {
+            @include breakpoint(medium) {
+                text-align: center;
+                width: 6rem;
+            }
+            a {
+                width: 4rem;
+                padding: $global-padding;
+            }
+        }
     }
 
     a {
