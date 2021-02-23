@@ -10,6 +10,8 @@ export const Nav = () => {
     const breakpointM = 768;
 
     let menuRef = useRef();
+    let disposer;
+
 
 
     window.addEventListener('resize', () => {
@@ -17,13 +19,17 @@ export const Nav = () => {
         return setWindowWidth(window.innerWidth);
     });
 
+    const handleMouseDown = (e) => {
+        if (!menuRef.current.contains(e.target)) {
+            setAnimateToggle('close');
+        }
+    } 
+
     if (windowWidth < breakpointM) {
         console.log(animateToggle)
-        document.addEventListener('mousedown', (e) => {
-            if (!menuRef.current.contains(e.target)) {
-                setAnimateToggle('close');
-            }
-        });
+        document.addEventListener('mousedown', (e) => {handleMouseDown(e)}, true);
+    } else {
+        document.removeEventListener('mousedown', handleMouseDown, false);
     }
 
     const menuSlideIn = () => {
@@ -57,44 +63,46 @@ export const Nav = () => {
 
 
     return (
-        <div className='nav'>
-            {windowWidth >= breakpointM ? (
-                <div className='nav-links'>
-                    <div className='nav-link'>
-                        <NavLink to='/'>Home</NavLink>
-                    </div>
-                    <div className='nav-link'>
-                        <NavLink to='/about'>About</NavLink>
-                    </div>
-                    <div className='nav-link'>
-                        <NavLink to='/contact'>Contact</NavLink>
-                    </div>
-                    <div className='nav-link'>
-                        <NavLink to='/takeawaymenu'>Take Away</NavLink>
-                    </div>
-                    <div className='nav-link'>
-                        <NavLink to='/signup'>Sign Up</NavLink>
-                    </div>
-                </div>
-            ) : (
-                    <div ref={menuRef}>
-                        <div className='hamburgerToggle' onClick={() => menuSlideIn()}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+        <div className='fixed'>
+            <div className='nav'>
+                {windowWidth >= breakpointM ? (
+                    <div className='nav-links'>
+                        <div className='nav-link'>
+                            <NavLink to='/'>Home</NavLink>
                         </div>
-                        {hamburgerLogic()}
+                        <div className='nav-link'>
+                            <NavLink to='/about'>About</NavLink>
+                        </div>
+                        <div className='nav-link'>
+                            <NavLink to='/contact'>Contact</NavLink>
+                        </div>
+                        <div className='nav-link'>
+                            <NavLink to='/takeawaymenu'>Take Away</NavLink>
+                        </div>
+                        <div className='nav-link'>
+                            <NavLink to='/signup'>Sign Up</NavLink>
+                        </div>
                     </div>
-                )}
-            <div className='logo'>
-                {windowWidth >= breakpointM ? <img src={LogoBig} alt="Satzuki Logo" /> : <img src={Logo} alt="Satzuki Logo" />}
-            </div>
-            <div className='basket-icon'>
-                <div className='nav-link'>
-                    <NavLink to='/signin'>Sign In</NavLink>
+                ) : (
+                        <div ref={menuRef}>
+                            <div className='hamburgerToggle' onClick={() => menuSlideIn()}>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            {hamburgerLogic()}
+                        </div>
+                    )}
+                <div className='logo'>
+                    {windowWidth >= breakpointM ? <img src={LogoBig} alt="Satzuki Logo" /> : <img src={Logo} alt="Satzuki Logo" />}
                 </div>
-                <div className='nav-link'>
-                    <NavLink to='/basket'><RiShoppingBasketLine /></NavLink>
+                <div className='basket-icon'>
+                    <div className='nav-link'>
+                        <NavLink to='/signin'>Sign In</NavLink>
+                    </div>
+                    <div className='nav-link'>
+                        <NavLink to='/basket'><RiShoppingBasketLine /></NavLink>
+                    </div>
                 </div>
             </div>
         </div>

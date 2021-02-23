@@ -1,0 +1,6 @@
+.main {
+    margin-top: 3.3rem;
+    @include breakpoint(medium) {
+        margin-top: 4.5;
+    }
+}

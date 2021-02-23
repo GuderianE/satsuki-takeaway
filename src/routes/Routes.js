@@ -15,19 +15,21 @@ import { Checkout } from "../components/Checkout";
 export const Routes = () => {
   return (
     <Router>
-      <Header />
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/about" component={About} />
-        <Route path="/menu" component={Menu} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/takeawaymenu" component={TakeAwayMenu} />
-        <Route path="/basket" component={Basket} />
-        <Route path="/signup" component={SignUpForm} />
-        <Route path="/signin" component={SignInForm} />
-        <Route path="/checkout" component={Checkout} />
-      </Switch>
-      <Footer />
+        <Header />
+      <div className='main'>
+        <Switch>
+          <Route path="/" component={Home} exact />
+          <Route path="/about" component={About} />
+          <Route path="/menu" component={Menu} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/takeawaymenu" component={TakeAwayMenu} />
+          <Route path="/basket" component={Basket} />
+          <Route path="/signup" component={SignUpForm} />
+          <Route path="/signin" component={SignInForm} />
+          <Route path="/checkout" component={Checkout} />
+        </Switch>
+        <Footer />
+      </div>
     </Router>
   );
 };
