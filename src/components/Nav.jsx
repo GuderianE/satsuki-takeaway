@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { RiShoppingBasketLine } from "react-icons/ri";
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/Satsuki-Logo (2).png';
@@ -11,18 +11,20 @@ export const Nav = () => {
 
     let menuRef = useRef();
 
-    useEffect(() => {
-        if (windowWidth < breakpointM) {
-            document.addEventListener('mousedown', (e) => {
-                if (!menuRef.current.contains(e.target)) {
-                    setAnimateToggle('close');
-                }
-            });
-        }
-        window.addEventListener('resize', () => {
-            return setWindowWidth(window.innerWidth);
-        });
+
+    window.addEventListener('resize', () => {
+        console.log(windowWidth);
+        return setWindowWidth(window.innerWidth);
     });
+
+    if (windowWidth < breakpointM) {
+        console.log(animateToggle)
+        document.addEventListener('mousedown', (e) => {
+            if (!menuRef.current.contains(e.target)) {
+                setAnimateToggle('close');
+            }
+        });
+    }
 
     const menuSlideIn = () => {
         const slideInAnimation = animateToggle !== 'open' ? 'open' : 'close';
@@ -84,15 +86,15 @@ export const Nav = () => {
                         {hamburgerLogic()}
                     </div>
                 )}
-                <div className='logo'>
-                    {windowWidth >= breakpointM ? <img src={LogoBig} alt=""/> : <img src={Logo} alt=""/>}
-                </div>
+            <div className='logo'>
+                {windowWidth >= breakpointM ? <img src={LogoBig} alt="Satzuki Logo" /> : <img src={Logo} alt="Satzuki Logo" />}
+            </div>
             <div className='basket-icon'>
                 <div className='nav-link'>
                     <NavLink to='/signin'>Sign In</NavLink>
                 </div>
                 <div className='nav-link'>
-                    <NavLink to='/basket'><RiShoppingBasketLine/></NavLink>
+                    <NavLink to='/basket'><RiShoppingBasketLine /></NavLink>
                 </div>
             </div>
         </div>
