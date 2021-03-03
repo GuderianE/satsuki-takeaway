@@ -3,10 +3,12 @@
     top: 0;
     width: 100vw;
 }
+
 .nav {
     background-color: $secondary;
     position: relative;
     padding: $global-padding;
+    z-index: 2000;
 
     @include breakpoint(medium) {
         @include flexy($aligni: center);
@@ -69,11 +71,13 @@
                 height: 2vh;
                 width: 4.5rem;
             }
+
             @include breakpoint(large) {
                 width: 5rem;
             }
         }
     }
+
     .logo {
         @include flexy($just: center, $aligni: center);
         position: absolute;
@@ -81,9 +85,11 @@
         left: 44%;
         margin: 0;
         width: 3rem;
+
         img {
             width: 100%;
         }
+
         @include breakpoint(medium) {
             top: .2rem;
             left: 2rem;
@@ -91,13 +97,16 @@
             width: 6rem;
         }
     }
+
     .basket-icon {
         @include flexy($just: flex-end, $aligni: center);
+
         .nav-link {
             @include breakpoint(medium) {
                 text-align: center;
                 width: 6rem;
             }
+
             a {
                 width: 4rem;
                 padding: $global-padding;

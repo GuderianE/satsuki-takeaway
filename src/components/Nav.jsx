@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { RiShoppingBasketLine } from "react-icons/ri";
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/Satsuki-Logo (2).png';
@@ -10,27 +10,39 @@ export const Nav = () => {
     const breakpointM = 768;
 
     let menuRef = useRef();
-    let disposer;
 
+    // window.addEventListener('resize', () => {
+    //     return setWindowWidth(window.innerWidth);
+    // });
 
+    // const handleMouseDown = (e) => {
+    //     if (!menuRef.current.contains(e.target)) {
+    //         setAnimateToggle('close');
+    //     }
+    // }
 
-    window.addEventListener('resize', () => {
-        console.log(windowWidth);
-        return setWindowWidth(window.innerWidth);
-    });
+    // const eventHandler = () => {
+    //     document.addEventListener('mousedown', (e) => { handleMouseDown(e) }, true);
+    // }
 
-    const handleMouseDown = (e) => {
-        if (!menuRef.current.contains(e.target)) {
-            setAnimateToggle('close');
-        }
-    } 
+    // const removeHandler = () => {
+    //     console.log('working')
+    //     document.removeEventListener('mousedown', handleMouseDown, false);
+    // }
 
-    if (windowWidth < breakpointM) {
-        console.log(animateToggle)
-        document.addEventListener('mousedown', (e) => {handleMouseDown(e)}, true);
-    } else {
-        document.removeEventListener('mousedown', handleMouseDown, false);
-    }
+    // const menuHandler = () => {
+    //     if (windowWidth < breakpointM) {
+    //         console.log(animateToggle)
+    //         eventHandler()
+    //     } else if (windowWidth > breakpointM) {
+    //         removeHandler()
+    //         console.log('eventHandler', eventHandler());
+    //     }
+    // }
+
+    // useEffect(() => {
+    //         menuHandler()
+    // })
 
     const menuSlideIn = () => {
         const slideInAnimation = animateToggle !== 'open' ? 'open' : 'close';

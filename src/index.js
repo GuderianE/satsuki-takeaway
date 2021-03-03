@@ -5,13 +5,16 @@ import { createStore } from 'redux';
 import { Routes } from './routes/Routes';
 import rootReducer from './reducers';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import StyledEngineProvider from '@material-ui/core/StyledEngineProvider';
 import './index.css';
 
 const store = createStore(rootReducer, composeWithDevTools());
 
 ReactDOM.render(
   <Provider store={store}>
+  <StyledEngineProvider injectFirst>
     <Routes />
+  </StyledEngineProvider>
   </Provider>,
   document.getElementById('root')
 );

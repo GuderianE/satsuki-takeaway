@@ -7,6 +7,8 @@ import tempura from '../assets/tempura.jpg';
 import sukiyaki from '../assets/sukiyaki.jpg';
 import satsuki from '../assets/satsuki.jpg';
 import zashiki from '../assets/zashiki.jpg';
+import MasonryImageList from './MasonryImageList';
+
 export const Home = () => {
   return (
     <article>
@@ -151,14 +153,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className='image_gallery'>
-        <img src='' alt='' />
-        <img src='' alt='' />
-        <img src='' alt='' />
-        <img src='' alt='' />
-        <img src='' alt='' />
-        <img src='' alt='' />
-      </section>
+      <MasonryImageList/>
     </article>
   );
 };
