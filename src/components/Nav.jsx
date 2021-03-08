@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { RiShoppingBasketLine } from "react-icons/ri";
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/Satsuki-Logo (2).png';
@@ -11,38 +11,35 @@ export const Nav = () => {
 
     let menuRef = useRef();
 
-    // window.addEventListener('resize', () => {
-    //     return setWindowWidth(window.innerWidth);
-    // });
+    window.addEventListener('resize', () => {
+        return setWindowWidth(window.innerWidth);
+    });
 
-    // const handleMouseDown = (e) => {
-    //     if (!menuRef.current.contains(e.target)) {
-    //         setAnimateToggle('close');
-    //     }
-    // }
+    const handleMouseDown = (e) => {
+        if (!menuRef.current.contains(e.target)) {
+            setAnimateToggle('close');
+        }
 
-    // const eventHandler = () => {
-    //     document.addEventListener('mousedown', (e) => { handleMouseDown(e) }, true);
-    // }
+    }
 
-    // const removeHandler = () => {
-    //     console.log('working')
-    //     document.removeEventListener('mousedown', handleMouseDown, false);
-    // }
+    const eventHandler = useCallback(() => {
+        document.addEventListener('mousedown', (e) => { handleMouseDown(e) }, true);
+    },[])
 
-    // const menuHandler = () => {
-    //     if (windowWidth < breakpointM) {
-    //         console.log(animateToggle)
-    //         eventHandler()
-    //     } else if (windowWidth > breakpointM) {
-    //         removeHandler()
-    //         console.log('eventHandler', eventHandler());
-    //     }
-    // }
+    const removeHandler = useCallback(() => {
+        console.log('working')
+        document.removeEventListener('mousedown', handleMouseDown, false);
+    },[])
 
-    // useEffect(() => {
-    //         menuHandler()
-    // })
+    useEffect(() => {
+        if (windowWidth < breakpointM) {
+            eventHandler()
+        } 
+            return () => {
+                removeHandler()
+            }
+    }, [eventHandler, removeHandler, windowWidth])
+
 
     const menuSlideIn = () => {
         const slideInAnimation = animateToggle !== 'open' ? 'open' : 'close';
@@ -51,7 +48,7 @@ export const Nav = () => {
 
     const hamburgerLogic = () => {
         return (
-            <div className={animateToggle}>
+            <nav className={animateToggle}>
                 <div className='nav-links'>
                     <div className='nav-link'>
                         <NavLink to='/'>Home</NavLink>
@@ -69,14 +66,13 @@ export const Nav = () => {
                         <NavLink to='/signup'>Sign Up</NavLink>
                     </div>
                 </div>
-            </div>
+            </nav>
         );
     };
 
-
     return (
         <div className='fixed'>
-            <div className='nav'>
+            <div className='nav' ref={menuRef}>
                 {windowWidth >= breakpointM ? (
                     <div className='nav-links'>
                         <div className='nav-link'>
@@ -96,14 +92,14 @@ export const Nav = () => {
                         </div>
                     </div>
                 ) : (
-                        <div ref={menuRef}>
+                        <nav >
                             <div className='hamburgerToggle' onClick={() => menuSlideIn()}>
                                 <span></span>
                                 <span></span>
                                 <span></span>
                             </div>
                             {hamburgerLogic()}
-                        </div>
+                        </nav>
                     )}
                 <div className='logo'>
                     {windowWidth >= breakpointM ? <img src={LogoBig} alt="Satzuki Logo" /> : <img src={Logo} alt="Satzuki Logo" />}
