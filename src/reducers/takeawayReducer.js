@@ -6,6 +6,8 @@ const initialState = {
 
 export const takeawayReducer = (state = initialState, action) => {
     switch (action.type) {
+        case ACTION.GET_ITEMS:
+            return action.payload
         case ACTION.ADD_ITEM:
             const exist = state.items.find((item) => item.id === action.payload.id);
             console.log('exist is false', action.payload);

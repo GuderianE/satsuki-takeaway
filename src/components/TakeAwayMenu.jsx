@@ -1,13 +1,29 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { TakeAwayMenuCard } from '../components/TakeAwayMenuCard';
-import { useSelector } from 'react-redux';
-import { menu } from '../dummyData.json';
+import { useSelector, useDispatch } from 'react-redux';
+// import { menu } from '../dummyData.json';
 import { SearchBar } from './SearchBar';
+import {getMenuItems} from '../APIs/apiCalls';
+import { getItems } from '../actions/basketActions';
 
 export const TakeAwayMenu = () => {
   const state = useSelector((state) => state.searchReducer);
-  console.log('state', state);
-  const menuItems = Object.values(menu);
+  const {loading, setLoading} = useState(true);
+  const menuItems = useSelector((state) => state.takeawayReducer);
+  console.log(menuItems);
+  // console.log('state', state);
+  const dispatch = useDispatch();
+  // const menuItems = Object.values(menu);
+
+  useEffect(() => {
+    const fetchMenu = async () => {
+      const result = await getMenuItems()
+      return dispatch(getItems(result));
+    }
+    fetchMenu();
+    setLoading(false)
+  }, [])
+
   const searchstate = state.toLowerCase().trim();
   const tragetCategory = menuItems.map((category) => {
     /* checks if input has string if true searches for match and returns match only */
@@ -29,7 +45,7 @@ export const TakeAwayMenu = () => {
   return (
     <>
       <SearchBar />
-      <div className='takeawaymenu_container'>{tragetCategory}</div>
+      <div className='takeawaymenu_container'>{(loading ? <h1>Loading...</h1> : {tragetCategory})}</div>
     </>
   );
 };

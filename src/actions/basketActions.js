@@ -1,5 +1,8 @@
 import {ACTION} from '../actions/basketTypes';
 
+export const getItems = (items) => {
+    return {type: ACTION.GET_ITEMS, payload: items}
+}
 export const addItem = (item) => {
     return {type: ACTION.ADD_ITEM, payload: item}
 }
